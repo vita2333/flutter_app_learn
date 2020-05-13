@@ -131,17 +131,20 @@ class MyAppBar extends StatelessWidget {
 class MyScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Column(
-        children: <Widget>[
-          MyAppBar(
-              title: Text('example title',
-                  style: Theme.of(context).primaryTextTheme.headline6)),
-          Expanded(
-              child: Center(
-            child: Text('Hello world'),
-          ))
-        ],
+    return GestureDetector(
+      onTap: () {},
+      child: Material(
+        child: Column(
+          children: <Widget>[
+            MyAppBar(
+                title: Text('example title',
+                    style: Theme.of(context).primaryTextTheme.headline6)),
+            Expanded(
+                child: Center(
+              child: Text('Hello world'),
+            ))
+          ],
+        ),
       ),
     );
   }
