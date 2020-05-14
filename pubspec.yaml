@@ -26,8 +26,15 @@ dependencies:
   english_words: ^3.1.5
   shared_preferences: ^0.5.7+2
   cached_network_image: ^2.0.0
+  dio: ^3.0.3
+  dio_cookie_manager: ^1.0.0
   provider: ^3.0.0+1
-
+  image_picker: ^0.6.0+20
+  geolocator: ^5.1.1+1
+  camera: ^0.5.2+2
+  path_provider: ^1.2.0
+  video_player: ^0.10.1+6
+  webview_flutter: ^0.3.10+4
 
 
   # The following adds the Cupertino Icons font to your application.
