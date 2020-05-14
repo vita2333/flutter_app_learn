@@ -206,11 +206,11 @@ class CounterIncrementor extends StatelessWidget {
 class Counter2Part extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _CounterState2Part();
+    return _Counter2PartState();
   }
 }
 
-class _CounterState2Part extends State<Counter2Part> {
+class _Counter2PartState extends State<Counter2Part> {
   int _counter = 0;
   void _increment() {
     setState(() {
