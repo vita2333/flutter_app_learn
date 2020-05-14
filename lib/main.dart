@@ -232,10 +232,3 @@ class _CounterState2Part extends State<Counter2Part> {
     );
   }
 }
-
-class Product {
-  const Product({this.name});
-  final String name;
-}
-
-typedef void CartChangedCallBack(Product product, bool inCart);
