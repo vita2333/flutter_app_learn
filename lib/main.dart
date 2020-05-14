@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_learn/common/Global.dart';
 import 'package:flutter_app_learn/routes/HomePage.dart';
-import 'package:flutter_app_learn/states/profile_change_notifier.dart';
+import 'package:flutter_app_learn/states/ProfileChangeNotifier.dart';
 import 'package:provider/provider.dart';
 
 void main() => Global.init().then((value) => runApp(MyApp()));
