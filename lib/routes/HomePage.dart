@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_learn/states/ProfileChangeNotifier.dart';
+import 'package:provider/provider.dart';
 
 class HomeRoute extends StatefulWidget {
   @override
@@ -17,6 +19,16 @@ class _HomeRouteState extends State<HomeRoute> {
   }
 
   Widget _buildBody() {
-    return Text('body');
+    UserModel userModel = Provider.of<UserModel>(context);
+    if (!userModel.isLogin) {
+      return Center(
+        child: RaisedButton(
+          child: Text('login'),
+          onPressed: () => Navigator.of(context).pushNamed('login'),
+        ),
+      );
+    }
+
+    return Text(userModel.isLogin.toString());
   }
 }

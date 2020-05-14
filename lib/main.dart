@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_learn/common/Global.dart';
 import 'package:flutter_app_learn/routes/HomePage.dart';
+import 'package:flutter_app_learn/routes/LoginRoute.dart';
+import 'package:flutter_app_learn/routes/ThemeChangeRoute.dart';
 import 'package:flutter_app_learn/states/ProfileChangeNotifier.dart';
 import 'package:provider/provider.dart';
 
@@ -22,6 +24,10 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(primarySwatch: themeModel.theme),
             home: HomeRoute(),
             locale: localeModel.getLocale(),
+            routes: {
+              'login': (context) => LoginRoute(),
+              'themes': (context) => ThemeChangeRoute(),
+            },
           );
         },
       ),
