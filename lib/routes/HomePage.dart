@@ -1,5 +1,9 @@
+import 'package:flukit/flukit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_learn/common/Api.dart';
+import 'package:flutter_app_learn/models/repo.dart';
 import 'package:flutter_app_learn/states/ProfileChangeNotifier.dart';
+import 'package:flutter_app_learn/widgets/RepoItem.dart';
 import 'package:provider/provider.dart';
 
 class HomeRoute extends StatefulWidget {
@@ -29,6 +33,15 @@ class _HomeRouteState extends State<HomeRoute> {
       );
     }
 
-    return Text(userModel.isLogin.toString());
+    return InfiniteListView<Repo>(
+        onRetrieveData: (int page, List<Repo> items, bool refresh) async {
+      var data = await GitHub(context)
+          .getRepos({'page': page, 'page_size': 20}, refresh: refresh);
+      items.addAll(data);
+      // 如果接口返回的数量等于'page_size'，则认为还有数据，反之则认为最后一页
+      return data.length == 20;
+    }, itemBuilder: (List list, int index, BuildContext ctx) {
+      return RepoItem(list[index]);
+    });
   }
 }

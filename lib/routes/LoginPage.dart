@@ -107,6 +107,8 @@ class _LoginRouteState extends State<LoginRoute> {
         if (e.response?.statusCode == 401) {
           showToast('username or password wrong');
         } else {
+          print(e.toString());
+
           showToast(e.toString());
         }
       } finally {
