@@ -1,0 +1,16 @@
+{
+  "id": "1822366",
+  "name": "vita2333_icon",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1433749",
+      "name": "fork",
+      "font_class": "fork",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    }
+  ]
+}

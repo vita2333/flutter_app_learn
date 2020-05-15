@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_learn/models/repo.dart';
+import 'package:flutter_app_learn/widgets/MyIcons.dart';
 
 class RepoItem extends StatefulWidget {
   final Repo repo;
@@ -99,6 +100,11 @@ class _RepoItemState extends State<RepoItem> {
                           .padRight(paddingWidth)),
                   Icon(Icons.info_outline),
                   Text(" " +
+                      widget.repo.forks_count
+                          .toString()
+                          .padRight(paddingWidth)),
+                  Icon(MyIcons.fork),
+                  Text(
                       widget.repo.forks_count.toString().padRight(paddingWidth))
                 ];
 
