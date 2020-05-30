@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_learn/common/Api.dart';
 import 'package:flutter_app_learn/models/repo.dart';
 import 'package:flutter_app_learn/states/ProfileChangeNotifier.dart';
+import 'package:flutter_app_learn/widgets/Mydrawer.dart';
 import 'package:flutter_app_learn/widgets/RepoItem.dart';
 import 'package:provider/provider.dart';
 
@@ -19,6 +20,7 @@ class _HomeRouteState extends State<HomeRoute> {
         title: Text('home'),
       ),
       body: _buildBody(),
+      drawer: MyDrawer(),
     );
   }
 
